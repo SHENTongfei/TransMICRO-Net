@@ -1,0 +1,12 @@
+# Manuscript source (Overleaf is the canonical source — do not push .tex)
+*.tex
+*.bbl
+*.blg
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Python artifacts
+__pycache__/
+*.pyc
