@@ -1,7 +1,7 @@
 """SCI Fig 8 v2: Hero panels + sensitivity/attention dual-axis (advanced form)"""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sci_common.py'), encoding='utf-8').read())
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'plot_common.py'), encoding='utf-8').read())
 
 from matplotlib.gridspec import GridSpec
 
