@@ -1,7 +1,7 @@
 """SCI Fig 4 v2: Fix panel I Yield scaling (no more 'Yield x20' misleading)"""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sci_common.py'), encoding='utf-8').read())
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'plot_common.py'), encoding='utf-8').read())
 
 from matplotlib.gridspec import GridSpec
 from sklearn.preprocessing import StandardScaler
@@ -126,12 +126,12 @@ for j, (mname, c) in enumerate(zip(models4, colors4)):
     # value labels
     for xi, v in zip(x + (j-1.5)*w, vals):
         ax.text(xi, v+0.05, f'{v:.2f}', ha='center', fontsize=6, fontweight='bold')
-ax.set_xticks(x); ax.set_xticklabels(indicators, fontsize=7)
-ax.set_ylabel('Relative MAE (model-mean normalised)')
+ax.set_xticks(x); ax.set_xticklabels(indicators, fontsize=7.5)
+ax.set_ylabel('Rel. MAE\n(norm. to indicator mean)')
 ax.axhline(1, color=NEU_D, ls='--', lw=0.8, alpha=0.6)
 ax.text(2.4, 1.05, '1.0 = avg', fontsize=6, color=NEU_D, ha='right', style='italic')
 ax.legend(fontsize=5.5, ncol=2, frameon=True, fancybox=True, framealpha=0.9, edgecolor='none',
-          loc='upper right')
+          loc='upper right', bbox_to_anchor=(1.0, 1.18))
 ax.set_ylim(0, 2.5)
 set_style(ax); add_label(ax, 'I', x=-0.14, y=1.06)
 
