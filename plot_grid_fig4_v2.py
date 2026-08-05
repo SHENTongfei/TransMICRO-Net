@@ -52,7 +52,7 @@ ax.plot(strain, true_c, '-', color='#272727', lw=1.6, label='Measured')
 ax.plot(strain, pred_c, '--', color=C_OURS, lw=1.5, label='Reconstructed')
 ax.fill_between(strain, true_c, pred_c, alpha=0.12, color=C_OURS)
 ax.set_xlabel('Strain'); ax.set_ylabel('Stress (Pa)')
-ax.legend(loc='upper right', frameon=True, fancybox=True, framealpha=0.9, edgecolor='none', fontsize=6)
+ax.legend(loc='upper left', frameon=True, fancybox=True, framealpha=0.9, edgecolor='none', fontsize=6)
 set_style(ax); add_label(ax, 'D', x=-0.14, y=1.06)
 
 # E
